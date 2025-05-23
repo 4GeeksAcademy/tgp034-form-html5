@@ -29,30 +29,33 @@
             </style>
             <div class="col-md-5 my-2">
                 <label for="inputCard" class="form-label">Card <i>#</i></label>
-                <input type="text" pattern="[0-9]" inputmode="numeric" placeholder="XXXXXXXXXXXXXXXX" class="form-control" id="inputCard" required>
+                <input type="text" pattern="^[0-9]{16,16}$" inputmode="numeric" placeholder="XXXXXXXXXXXXXXXX" class="form-control" id="inputCard" required>
             </div>
             <div class="col-md-3 my-2">
                 <label for="inputCVC" class="form-label">CVC <i>#</i> </label>
-                <input type="text" pattern="[0-9]" inputmode="numeric" placeholder="0000" class="form-control" id="inputCVC" required>
+                <input type="text" pattern="^[0-9]{4,4}$" inputmode="numeric" placeholder="0000" class="form-control" id="inputCVC" required>
             </div>
             <div class="col-md-4 my-2">
                 <label for="inputAmount" class="form-label">Amount</label>
                 <div class="container d-flex">
                     <strong>$</strong>
-                    <input type="text" placeholder="Amount" class="form-control" id="inputAmount" required>
+                    <input type="text" placeholder="Amount" pattern="^[0-9]{1,10}$" inputmode="numeric" class="form-control" id="inputAmount" required>
                 </div>
             </div>
             <div class="col-6 my-2">
                 <label for="inputFirstName" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="inputFirstName" required>
+                <input type="text" inputmode="text" pattern="[A-Za-z\s]+" 
+                class="form-control" id="inputFirstName" required>
             </div>
             <div class="col-6 my-2">
                 <label for="inputLastName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="inputLastName" required>
+                <input type="text" inputmode="text" pattern="[A-Za-z\s]+"  
+                class="form-control" id="inputLastName" required>
             </div>
             <div class="col-md-6 my-2">
                 <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity" required>
+                <input type="text" inputmode="text" pattern="[A-Za-z\s]+"  
+                class="form-control" id="inputCity" required>
             </div>
             <div class="col-md-3 my-2">
                 <label for="inputState" placeholder="Pick a state" class="form-label">State</label>
@@ -112,7 +115,7 @@
             </div>
             <div class="col-md-3 my-2">
                 <label for="inputZip" class="form-label">Postal Code</label>
-                <input type="text" class="form-control" id="inputZip" required>
+                <input type="text" pattern=^+$ class="form-control" id="inputZip" required>
             </div>
 
             <div class="col-md-6 my-2">
